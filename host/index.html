@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="What it means to host your community in Egypt, on any pathway. Egypt Eclipse 2027.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Egypt Eclipse">
+<meta property="og:title" content="Egypt Eclipse Hosts: Trusted to hold the journey">
+<meta property="og:description" content="What it means to host your community in Egypt, on any pathway.">
+<meta property="og:url" content="https://invitation.egypt-eclipse.com/host/">
+<meta property="og:image" content="https://invitation.egypt-eclipse.com/host/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Egypt Eclipse. For Hosts: Trusted to hold the journey.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://invitation.egypt-eclipse.com/host/og.jpg">
+<link rel="icon" href="../favicon.ico">
 <title>Egypt Eclipse Hosts: Role and Scope</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Instrument+Serif:ital@0;1&family=Tenor+Sans&display=swap" rel="stylesheet">
@@ -63,7 +76,7 @@ footer p{font-family:"Tenor Sans",Helvetica,Arial,sans-serif;font-size:11px;lett
 
 </main>
 <footer><img src="../logo.png" alt="Egypt Eclipse"><p>30 July to 9 August 2027 · Luxor, the Nile and Giza</p><p style="margin-top:10px;color:#E4BD82">egypt-eclipse.com</p></footer>
-<script>window.MK_ENDPOINT = "";</script>
+<script>window.MK_SUPABASE = {url:"https://ybmevmwefsvigcesjojo.supabase.co", key:"sb_publishable_jMCxUWH_nqgi0qomakS0Gg_3sEexiQ8"};</script>
 <div id="mk-btn" class="mk-float" hidden><button type="button" id="mk-open">Suggest an edit</button></div>
 <button type="button" id="mk-general" class="mk-fab">Comments <span id="mk-count">0</span></button>
 <aside id="mk-panel" class="mk-panel" aria-label="Comments and suggested edits" hidden>
@@ -108,7 +121,9 @@ mark.mk-hl.flash{background:rgba(228,189,130,.95)}
 </style>
 <script>
 (function(){
-const ENDPOINT = window.MK_ENDPOINT || "";            // Google Apps Script web app URL
+const SB = window.MK_SUPABASE || null;
+const API = SB ? SB.url + "/rest/v1/page_comments" : "";
+const HDR = SB ? {apikey:SB.key, Authorization:"Bearer "+SB.key} : {};
 const PAGE = "host";
 const $ = s => document.querySelector(s);
 const main = document.querySelector('main');
@@ -166,7 +181,7 @@ function render(){
 }
 async function load(){
   try{
-    if(ENDPOINT){ const r=await fetch(ENDPOINT+'?page='+PAGE,{cache:'no-store'}); comments=await r.json(); }
+    if(API){ const r=await fetch(API+'?select=name,quote,comment,created_at&page=eq.'+PAGE+'&order=created_at.desc',{headers:HDR,cache:'no-store'}); if(!r.ok) throw new Error(r.status); comments=(await r.json()).map(c=>({name:c.name,quote:c.quote,comment:c.comment,created:c.created_at})); }
     else { comments=JSON.parse(localStorage.getItem('mk-local-'+PAGE)||'[]'); }
   }catch(e){ comments=comments||[]; }
   comments.sort((a,b)=>new Date(b.created)-new Date(a.created));
@@ -180,10 +195,10 @@ $('#mk-form').onsubmit=async e=>{
   try{ localStorage.setItem('mk-name',c.name); }catch(e){}
   $('#mk-send').disabled=true; $('#mk-status').textContent='Saving…';
   try{
-    if(ENDPOINT){ await fetch(ENDPOINT,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(c)}); }
+    if(API){ const r=await fetch(API,{method:'POST',headers:Object.assign({'Content-Type':'application/json',Prefer:'return=minimal'},HDR),body:JSON.stringify({page:PAGE,name:c.name,quote:c.quote||null,comment:c.comment})}); if(!r.ok) throw new Error(r.status); }
     else { const a=JSON.parse(localStorage.getItem('mk-local-'+PAGE)||'[]'); a.push(c); localStorage.setItem('mk-local-'+PAGE,JSON.stringify(a)); }
     $('#mk-text').value=''; pendingQuote=''; $('#mk-quote').hidden=true; $('#mk-status').textContent='Thank you, added.';
-    setTimeout(load, ENDPOINT?1200:0);
+    load();
   }catch(err){ $('#mk-status').textContent='Couldn’t save. Please try again.'; }
   $('#mk-send').disabled=false;
 };
