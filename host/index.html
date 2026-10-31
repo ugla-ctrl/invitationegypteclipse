@@ -122,7 +122,7 @@ mark.mk-hl.flash{background:rgba(228,189,130,.95)}
 <script>
 (function(){
 const SB = window.MK_SUPABASE || null;
-const API = SB ? SB.url + "/rest/v1/page_comments" : "";
+const API = SB ? SB.url + "/functions/v1/page-comments" : "";
 const HDR = SB ? {apikey:SB.key, Authorization:"Bearer "+SB.key} : {};
 const PAGE = "host";
 const $ = s => document.querySelector(s);
@@ -181,7 +181,7 @@ function render(){
 }
 async function load(){
   try{
-    if(API){ const r=await fetch(API+'?select=name,quote,comment,created_at&page=eq.'+PAGE+'&order=created_at.desc',{headers:HDR,cache:'no-store'}); if(!r.ok) throw new Error(r.status); comments=(await r.json()).map(c=>({name:c.name,quote:c.quote,comment:c.comment,created:c.created_at})); }
+    if(API){ const r=await fetch(API+'?page='+PAGE,{cache:'no-store'}); if(!r.ok) throw new Error(r.status); comments=(await r.json()).map(c=>({name:c.name,quote:c.quote,comment:c.comment,created:c.created_at})); }
     else { comments=JSON.parse(localStorage.getItem('mk-local-'+PAGE)||'[]'); }
   }catch(e){ comments=comments||[]; }
   comments.sort((a,b)=>new Date(b.created)-new Date(a.created));
@@ -195,7 +195,7 @@ $('#mk-form').onsubmit=async e=>{
   try{ localStorage.setItem('mk-name',c.name); }catch(e){}
   $('#mk-send').disabled=true; $('#mk-status').textContent='Saving…';
   try{
-    if(API){ const r=await fetch(API,{method:'POST',headers:Object.assign({'Content-Type':'application/json',Prefer:'return=minimal'},HDR),body:JSON.stringify({page:PAGE,name:c.name,quote:c.quote||null,comment:c.comment})}); if(!r.ok) throw new Error(r.status); }
+    if(API){ const r=await fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({page:PAGE,name:c.name,quote:c.quote||null,comment:c.comment})}); if(!r.ok) throw new Error(r.status); }
     else { const a=JSON.parse(localStorage.getItem('mk-local-'+PAGE)||'[]'); a.push(c); localStorage.setItem('mk-local-'+PAGE,JSON.stringify(a)); }
     $('#mk-text').value=''; pendingQuote=''; $('#mk-quote').hidden=true; $('#mk-status').textContent='Thank you, added.';
     load();
