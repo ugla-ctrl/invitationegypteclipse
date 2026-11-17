@@ -54,6 +54,8 @@ p{margin:0 0 12px;text-wrap:pretty}
 .sign .who a{text-decoration:none}
 .sign .site{font-family:Cinzel,Georgia,serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--bronze)}
 
+.hero .lock{display:flex;align-items:center;gap:14px}.hero .lock span{font-family:Cinzel,Georgia,serif;font-size:17px;color:var(--gold);line-height:1}.hero .lock img{width:150px;height:auto;display:block}
+@media (max-width:640px){.hero .lock img{width:124px}}
 a.x{color:var(--bronze);text-decoration:underline;text-decoration-color:rgba(199,167,120,.7);text-underline-offset:3px}
 a.x:hover{color:var(--ink)}
 .proof{font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-weight:500;font-size:20px;line-height:1.4;margin:14px 0 0;padding-top:12px;border-top:1px solid rgba(199,167,120,.5)}
@@ -79,7 +81,7 @@ a.x:hover{color:var(--ink)}
   <p class="date cz">July 30 – August 9, 2027</p>
   <img class="wm" src="wordmark.png" alt="Egypt Eclipse">
   <div class="rule"></div>
-  <p class="for cz">For the Do LaB</p>
+  <div class="lock"><span>×</span><img src="dolab-logo.png" alt="Do LaB"></div>
  </div>
 </header>
 <main>
@@ -274,7 +276,7 @@ async function build(){
  var g=hx.createLinearGradient(0,0,0,250);g.addColorStop(0,'rgba(16,17,19,0.1)');g.addColorStop(.4,'rgba(16,17,19,0.55)');g.addColorStop(.78,'rgba(16,17,19,0.93)');g.addColorStop(1,'#101113');hx.fillStyle=g;hx.fillRect(0,0,816,250);
  hx.textAlign='center';hx.font='13px Cinzel';hx.letterSpacing='2.6px';hx.fillStyle='#E5DECA';hx.fillText('JULY 30 – AUGUST 9, 2027',409.3,80);
  hx.drawImage(wm,248,94,320,85);hx.fillStyle='#C7A778';hx.fillRect(293,193,230,1);
- hx.font='12px Cinzel';hx.letterSpacing='3.84px';hx.fillText('FOR THE DO LAB',409.9,218);
+ var dl=await img('dolab-logo.png');hx.letterSpacing='0px';hx.font='17px Cinzel';hx.fillStyle='#C7A778';hx.textAlign='left';hx.fillText('\u00d7',330,221);hx.drawImage(dl,355,205,130,15.6);
  var heroJ=await doc.embedJpg(await jpg(hc));
  var strips=[['colonnade.jpg',.5],['hatshepsut.jpg',1],['nile.jpg',.55]], ws=[0.8,1.3,1].map(function(f){return 656*f/3.1;}), sj=[];
  for(var i=0;i<3;i++){var im=await img(strips[i][0]);sj.push(await doc.embedJpg(await jpg(cover(im,ws[i],96,strips[i][1]))));}
