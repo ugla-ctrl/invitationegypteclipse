@@ -53,6 +53,24 @@ p{margin:0 0 12px;text-wrap:pretty}
 .sign .who{font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-weight:500;font-size:22px}
 .sign .who a{text-decoration:none}
 .sign .site{font-family:Cinzel,Georgia,serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--bronze)}
+
+a.x{color:var(--bronze);text-decoration:underline;text-decoration-color:rgba(199,167,120,.7);text-underline-offset:3px}
+a.x:hover{color:var(--ink)}
+.proof{font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-weight:500;font-size:20px;line-height:1.4;margin:14px 0 0;padding-top:12px;border-top:1px solid rgba(199,167,120,.5)}
+.roles .when{font-family:Cinzel,Georgia,serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;margin:8px 0 0}
+.roles .when a{color:var(--bronze);text-decoration:none;border-bottom:1px solid rgba(199,167,120,.7)}
+.band .in{text-align:left}
+.rows{list-style:none;margin:0;padding:0}
+.rows li{display:grid;grid-template-columns:62px 1fr;gap:8px;padding:5px 0;border-top:1px solid rgba(130,89,49,.18);font-size:16px;line-height:1.35}
+.rows li:first-child{border-top:0}
+.rows .d{font-family:Cinzel,Georgia,serif;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--bronze);padding-top:3px}
+.rows a{color:var(--ink);text-decoration:underline;text-decoration-color:rgba(130,89,49,.45);text-underline-offset:3px}
+.dl-btn{position:fixed;top:16px;right:16px;z-index:35;display:inline-flex;align-items:center;gap:8px;background:rgba(16,17,19,.82);color:#E5DECA;border:1px solid #C7A778;font-family:Cinzel,Georgia,serif;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;padding:10px 16px;cursor:pointer;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.dl-btn:hover{background:#101113;color:#F4F0E8}
+.dl-btn[disabled]{opacity:.7;cursor:wait}
+.dl-btn svg{width:14px;height:14px}
+@media (max-width:640px){.dl-btn{top:12px;right:12px;padding:9px 12px;font-size:10.5px}}
+@media print{.dl-btn,.mk-fab,#mk-panel,#mk-btn{display:none!important}}
 @media (max-width:640px){body{font-size:17px}h1{font-size:34px}.strip{grid-template-columns:1fr 1fr}.strip img:last-child{display:none}.strip img{height:120px}.roles,.band .in{grid-template-columns:1fr}.band .in{gap:20px}main{padding:34px 20px 10px}.sign{padding:24px 20px 90px}}</style></head>
 <body>
 <header class="hero">
@@ -67,8 +85,9 @@ p{margin:0 0 12px;text-wrap:pretty}
 <main>
 <p class="lab">Collaboration proposal</p>
 <h1>Back to Egypt</h1>
-<p>In December 2012 you took The Great Convergence to the pyramids and down the Nile. We&#39;d like to invite you back for the next great celestial gathering for the total solar eclipse over Luxor on August 2, 2027.</p>
-<p>Totality lasts 6 minutes 23 seconds, the longest on land this century. Around 500 people travel with us, by Nile cruise or on Luxor&#39;s West Bank, then on to Giza. We&#39;d love the Do LaB to be part of it.</p>
+<p>In December 2012 you took The Great Convergence to the pyramids and down the Nile. We&#39;d like to invite you back for the next great celestial gathering for the <a class="x" href="https://egypteclipse.com/totality">total solar eclipse over Luxor</a> on August 2, 2027.</p>
+<p>Totality lasts 6 minutes 23 seconds, the longest on land this century. Around 500 people travel with us, by <a class="x" href="https://egypteclipse.com/pathways/nile-cruise">Nile cruise</a> or on <a class="x" href="https://egypteclipse.com/pathways">Luxor&#39;s West Bank</a>, then on to <a class="x" href="https://egypteclipse.com/pathways/giza">Giza</a>. We&#39;d love the Do LaB to be part of it.</p>
+<p class="proof">From the team behind <a class="x" href="https://recap.icelandeclipse.com">Iceland Eclipse 2026</a>, which brought people from more than 75 countries together for totality.</p>
 <div class="strip">
  <img src="colonnade.jpg" alt="A traveler looking up in a sunlit temple colonnade">
  <img src="hatshepsut.jpg" alt="Temple of Hatshepsut lit at night beneath the cliffs">
@@ -76,18 +95,27 @@ p{margin:0 0 12px;text-wrap:pretty}
 </div>
 <div class="sec"><p class="lab">Where we see you</p><span></span></div>
 <div class="roles">
- <div><h3>I · Build</h3><p>Eclipse day is outdoors in August heat. We need shade and a stage on the Gathering field next to the Marsam hotel.</p></div>
- <div><h3>II · Curate</h3><p>Take a night: the celebration after totality on August 2, or the Lion&#39;s Gate at the Giza pyramids on August 8.</p></div>
- <div><h3>III · Host</h3><p>Bring your crew as a group on one of the Nile boats or at a Luxor hotel, and host that part of the journey.</p></div>
- <div><h3>IV · Share</h3><p>Tell the Lightning in a Bottle community about Egypt, and we&#39;ll tell ours about LIB. The dates don&#39;t overlap.</p></div>
+ <div><h3>I · Build</h3><p>Eclipse day is outdoors in August heat. We need shade and a stage on the Gathering field next to the <a class="x" href="https://egypteclipse.com/pathways/marsam">Marsam hotel</a>.</p><p class="when"><a href="https://egypteclipse.com/pathways/gathering">The Gathering · Aug 1 to 3</a></p></div>
+ <div><h3>II · Curate</h3><p>Take a night: the celebration after totality on August 2, or the Lion&#39;s Gate at the Giza pyramids on August 8.</p><p class="when"><a href="https://egypteclipse.com/pathways/lions-gate">Lion&#39;s Gate · Aug 8</a></p></div>
+ <div><h3>III · Host</h3><p>Bring your crew as a group on one of the Nile boats or at a Luxor hotel, and host that part of the journey.</p><p class="when"><a href="https://egypteclipse.com/pathways">The pathways</a></p></div>
+ <div><h3>IV · Share</h3><p>Tell the Lightning in a Bottle community about Egypt, and we&#39;ll tell ours about LIB. The dates don&#39;t overlap.</p><p class="when"><a href="https://egypteclipse.com/trilogy">The Eclipse Trilogy</a></p></div>
 </div>
 </main>
 <section class="band"><div class="in">
- <div><p class="lab">Moments</p><p>New Moon Ceremony, Aug 1<br>Eclipse Viewing, Aug 2<br>Totality Celebration, that evening<br>Lion&#39;s Gate in Giza, Aug 8</p></div>
+ <div><p class="lab">Moments</p><ul class="rows">
+  <li><span class="d">Aug 1</span><a href="https://egypteclipse.com/pathways/gathering">New Moon Ceremony</a></li>
+  <li><span class="d">Aug 2</span><a href="https://egypteclipse.com/totality">Eclipse Viewing</a></li>
+  <li><span class="d">Aug 2</span><a href="https://egypteclipse.com/pathways/gathering">Totality Celebration</a></li>
+  <li><span class="d">Aug 8</span><a href="https://egypteclipse.com/pathways/lions-gate">Lion&#39;s Gate, Giza</a></li>
+ </ul></div>
  <div><p class="lab">Terms</p><p>Open. We&#39;d rather work them out with you once we know what fits.</p></div>
- <div><p class="lab">Timing</p><p>First Contact Participant announcement is planned for Dec 8. Temple approvals around February. On site in Luxor from late July.</p></div>
+ <div><p class="lab">Timing</p><ul class="rows">
+  <li><span class="d">Dec 8</span><span>First Contact participant announcement</span></li>
+  <li><span class="d">Feb</span><span>Temple approvals</span></li>
+  <li><span class="d">Late Jul</span><span>On site in Luxor</span></li>
+ </ul></div>
 </div></section>
-<div class="sign"><span class="who">Mitch Morales, IMXP · <a href="mailto:mitch@imxp.org">mitch@imxp.org</a></span><span class="site">Egypt Eclipse | egypteclipse.com</span></div>
+<div class="sign"><span class="who">Mitch Morales, IMXP · <a href="mailto:mitch@imxp.org">mitch@imxp.org</a></span><a class="site" href="https://egypteclipse.com" style="text-decoration:none">Egypt Eclipse | egypteclipse.com</a></div>
 <script>window.MK_SUPABASE = {url:"https://ybmevmwefsvigcesjojo.supabase.co", key:"sb_publishable_jMCxUWH_nqgi0qomakS0Gg_3sEexiQ8"};</script>
 <div id="mk-btn" class="mk-float" hidden><button type="button" id="mk-open">Suggest an edit</button></div>
 <button type="button" id="mk-general" class="mk-fab">Suggest edits <span id="mk-count">0</span></button>
@@ -218,6 +246,88 @@ $('#mk-form').onsubmit=async e=>{
   $('#mk-send').disabled=false;
 };
 load();
+})();
+</script>
+
+<button type="button" id="dl-pdf" class="dl-btn" aria-label="Download this proposal as a PDF"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M8 2v8m0 0L4.8 6.8M8 10l3.2-3.2M2.5 12.5h11"/></svg><span>Download PDF</span></button>
+<script>
+(function(){
+var btn=document.getElementById('dl-pdf'); if(!btn) return;
+function L(src,g){return window[g]?Promise.resolve():new Promise(function(res,rej){var s=document.createElement('script');s.src=src;s.onload=res;s.onerror=rej;document.head.appendChild(s);});}
+function img(u){return new Promise(function(r,j){var i=new Image();i.onload=function(){r(i)};i.onerror=j;i.src=u;});}
+async function build(){
+ await L('https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js','PDFLib');
+ await L('https://cdn.jsdelivr.net/npm/@pdf-lib/fontkit@1.1.1/dist/fontkit.umd.min.js','fontkit');
+ var PL=window.PDFLib, rgb=PL.rgb;
+ var doc=await PL.PDFDocument.create(); doc.registerFontkit(window.fontkit);
+ doc.setTitle('Egypt Eclipse × Do LaB: Back to Egypt'); doc.setAuthor('IMXP'); doc.setSubject('Collaboration proposal');
+ async function F(u){var b=await (await fetch('https://cdn.jsdelivr.net/fontsource/fonts/'+u)).arrayBuffer();return doc.embedFont(b,{subset:true});}
+ var cin=await F('cinzel@latest/latin-400-normal.woff'), cor=await F('cormorant-garamond@latest/latin-600-normal.woff'), cori=await F('cormorant-garamond@latest/latin-500-italic.woff'), eb=await F('eb-garamond@latest/latin-400-normal.woff');
+ function hex(h){return rgb(parseInt(h.slice(1,3),16)/255,parseInt(h.slice(3,5),16)/255,parseInt(h.slice(5,7),16)/255);}
+ var INK=hex('#2D2925'),BR=hex('#825931'),GOLD=hex('#C7A778'),SAND=hex('#E5DECA'),PAPER=hex('#F7F5F0');
+ var S=0.75,PW=816,PH=1056;
+ function cover(im,w,h,py){var k=3,c=document.createElement('canvas');c.width=w*k;c.height=h*k;var x=c.getContext('2d');var sc=Math.max(c.width/im.naturalWidth,c.height/im.naturalHeight),sw=c.width/sc,sh=c.height/sc;x.drawImage(im,(im.naturalWidth-sw)/2,(im.naturalHeight-sh)*py,sw,sh,0,0,c.width,c.height);return c;}
+ async function jpg(c){var b=await new Promise(function(r){c.toBlob(r,'image/jpeg',0.9)});return new Uint8Array(await b.arrayBuffer());}
+ await document.fonts.load('13px Cinzel');
+ var hero=await img('hero.jpg'),wm=await img('wordmark.png');
+ var hc=cover(hero,816,250,0.12),hx=hc.getContext('2d');hx.scale(3,3);
+ var g=hx.createLinearGradient(0,0,0,250);g.addColorStop(0,'rgba(16,17,19,0.1)');g.addColorStop(.4,'rgba(16,17,19,0.55)');g.addColorStop(.78,'rgba(16,17,19,0.93)');g.addColorStop(1,'#101113');hx.fillStyle=g;hx.fillRect(0,0,816,250);
+ hx.textAlign='center';hx.font='13px Cinzel';hx.letterSpacing='2.6px';hx.fillStyle='#E5DECA';hx.fillText('JULY 30 – AUGUST 9, 2027',409.3,80);
+ hx.drawImage(wm,248,94,320,85);hx.fillStyle='#C7A778';hx.fillRect(293,193,230,1);
+ hx.font='12px Cinzel';hx.letterSpacing='3.84px';hx.fillText('FOR THE DO LAB',409.9,218);
+ var heroJ=await doc.embedJpg(await jpg(hc));
+ var strips=[['colonnade.jpg',.5],['hatshepsut.jpg',1],['nile.jpg',.55]], ws=[0.8,1.3,1].map(function(f){return 656*f/3.1;}), sj=[];
+ for(var i=0;i<3;i++){var im=await img(strips[i][0]);sj.push(await doc.embedJpg(await jpg(cover(im,ws[i],96,strips[i][1]))));}
+ var P1="In December 2012 you took The Great Convergence to the pyramids and down the Nile. We'd like to invite you back for the next great celestial gathering for the total solar eclipse over Luxor on August 2, 2027.";
+ var P2="Totality lasts 6 minutes 23 seconds, the longest on land this century. Around 500 people travel with us, by Nile cruise or on Luxor's West Bank, then on to Giza. We'd love the Do LaB to be part of it.";
+ var PROOF="From the team behind Iceland Eclipse 2026, which brought people from more than 75 countries together for totality.";
+ var R=[["I · Build","Eclipse day is outdoors in August heat. We need shade and a stage on the Gathering field next to the Marsam hotel.","THE GATHERING · AUG 1 TO 3"],["II · Curate","Take a night: the celebration after totality on August 2, or the Lion's Gate at the Giza pyramids on August 8.","LION'S GATE · AUG 8"],["III · Host","Bring your crew as a group on one of the Nile boats or at a Luxor hotel, and host that part of the journey.","THE PATHWAYS"],["IV · Share","Tell the Lightning in a Bottle community about Egypt, and we'll tell ours about LIB. The dates don't overlap.","THE ECLIPSE TRILOGY"]];
+ var MOM=[["AUG 1","New Moon Ceremony"],["AUG 2","Eclipse Viewing"],["AUG 2","Totality Celebration"],["AUG 8","Lion's Gate, Giza"]];
+ var TIM=[["DEC 8","First Contact participant announcement"],["FEB","Temple approvals"],["LATE JUL","On site in Luxor"]];
+ function W(t,f,s){return f.widthOfTextAtSize(t,s*S)/S;}
+ function wrap(t,f,s,w){var out=[],line='';t.split(' ').forEach(function(wd){var tr=line?line+' '+wd:wd;if(W(tr,f,s)>w&&line){out.push(line);line=wd;}else line=tr;});if(line)out.push(line);return out;}
+ function spW(t,f,s,ls){var a=0;for(var ch of t)a+=W(ch,f,s)+ls;return a-ls;}
+ function layout(k,page){
+  var draw=!!page;
+  function txt(t,x,top,f,s,lh,col,ls){if(!draw)return;var base=top+(lh-s)/2+s*0.8;if(!ls){page.drawText(t,{x:x*S,y:(PH-base)*S,size:s*S,font:f,color:col});return;}var cx=x;for(var ch of t){page.drawText(ch,{x:cx*S,y:(PH-base)*S,size:s*S,font:f,color:col});cx+=W(ch,f,s)+ls;}}
+  function rect(x,top,w,h,col){if(draw)page.drawRectangle({x:x*S,y:(PH-top-h)*S,width:w*S,height:h*S,color:col});}
+  if(draw){rect(0,0,PW,PH,PAPER);page.drawImage(heroJ,{x:0,y:(PH-250)*S,width:PW*S,height:250*S});}
+  var y=250+22*k;
+  txt('COLLABORATION PROPOSAL',72,y,cin,11,17.6,BR,2.64);y+=17.6+5*k;
+  txt('Back to Egypt',72,y,cor,32*Math.min(1,k+.1),35.2*k,INK);y+=35.2*k+8*k;
+  [P1,P2].forEach(function(p,i){var fs=15.5*Math.min(1,k+.05),lh=fs*1.45;wrap(p,eb,fs,672).forEach(function(l){txt(l,72,y,eb,fs,lh,INK);y+=lh;});y+=6*k;});
+  y+=4*k;rect(72,y,672,0.75,GOLD);y+=8*k;
+  var pf=17*Math.min(1,k+.05);wrap(PROOF,cori,pf,672).forEach(function(l){txt(l,72,y,cori,pf,pf*1.3,INK);y+=pf*1.3;});
+  y+=16*k;var sh=96*k,sx=72;for(var i=0;i<3;i++){if(draw)page.drawImage(sj[i],{x:sx*S,y:(PH-y-sh)*S,width:ws[i]*S,height:sh*S});sx+=ws[i]+8;}
+  y+=sh+20*k;
+  txt('WHERE WE SEE YOU',72,y,cin,11,17.6,BR,3.08);var lw=spW('WHERE WE SEE YOU',cin,11,3.08);rect(72+lw+16,y+8.8,744-(72+lw+16),0.75,GOLD);y+=17.6+12*k;
+  for(var r=0;r<2;r++){var hm=0;for(var c=0;c<2;c++){var e=R[r*2+c],x=72+c*356,yy=y;txt(e[0],x,yy,cor,22*Math.min(1,k+.08),25.3*k,BR);yy+=25.3*k+3*k;var fs=15*Math.min(1,k+.05),lh=fs*1.42;wrap(e[1],eb,fs,316).forEach(function(l){txt(l,x,yy,eb,fs,lh,INK);yy+=lh;});yy+=4*k;txt(e[2],x,yy,cin,10,15,BR,2);yy+=15;hm=Math.max(hm,yy-y);}y+=hm+(r?0:12*k);}
+  y+=20*k;
+  var colW=202.67,rowH=21*k,lh2=17*k;function rh(rw){return wrap(rw[1],eb,14,colW-60).length>1?rowH+lh2*(wrap(rw[1],eb,14,colW-60).length-1):rowH;}function tot(arr){return arr.reduce(function(a,rw){return a+rh(rw);},0);}var bh=16*k+16.8+4+Math.max(tot(MOM),tot(TIM),58)+16*k;
+  rect(0,y,PW,bh,SAND);
+  var cols=[72,72+colW+32,72+2*(colW+32)];
+  function rows(arr,x){var yy=y+16*k;txt(arguments[2],x,yy,cin,10.5,16.8,BR,2.52);yy+=16.8+4;arr.forEach(function(rw,i){if(i)rect(x,yy,colW,0.6,hex('#D7CBB4'));txt(rw[0],x,yy+1,cin,9.5,rowH,BR,1.3);var lines=wrap(rw[1],eb,14,colW-60);lines.forEach(function(l,j){txt(l,x+60,yy+(j?rowH-4*k+lh2*(j-1):0),eb,14,j?lh2:rowH,INK);});yy+=rh(rw);});}
+  rows(MOM,cols[0],'MOMENTS');
+  var ty=y+16*k;txt('TERMS',cols[1],ty,cin,10.5,16.8,BR,2.52);ty+=16.8+4;wrap("Open. We'd rather work them out with you once we know what fits.",eb,14,colW).forEach(function(l){txt(l,cols[1],ty,eb,14,19.6,INK);ty+=19.6;});
+  rows(TIM,cols[2],'TIMING');
+  y+=bh;
+  var mid=y+Math.max(14,(PH-y-24)/2);
+  var a='Mitch Morales, IMXP · ';txt(a,72,mid,cori,18,24,INK);txt('mitch@imxp.org',72+W(a,cori,18),mid,cori,18,24,BR);
+  var ft='EGYPT ECLIPSE | EGYPTECLIPSE.COM';txt(ft,744-spW(ft,cin,10,2),mid+4,cin,10,16,BR,2);
+  if(draw){var lk=function(u,x,top,w,h){var an=doc.context.obj({Type:'Annot',Subtype:'Link',Rect:[x*S,(PH-top-h)*S,(x+w)*S,(PH-top)*S],Border:[0,0,0],A:{Type:'Action',S:'URI',URI:PL.PDFString.of(u)}});page.node.addAnnot(doc.context.register(an));};lk('mailto:mitch@imxp.org',72+W(a,cori,18),mid,W('mitch@imxp.org',cori,18),24);lk('https://egypteclipse.com',744-spW(ft,cin,10,2),mid+4,spW(ft,cin,10,2),16);}
+  return y+24+28;
+ }
+ var k=1;for(var n=0;n<14&&layout(k,null)>PH-8;n++)k-=0.03;
+ var page=doc.addPage([PW*S,PH*S]);layout(k,page);
+ return await doc.save();
+}
+btn.addEventListener('click',async function(){
+ var lab=btn.querySelector('span');btn.disabled=true;lab.textContent='Preparing…';
+ try{var bytes=await build();var url=URL.createObjectURL(new Blob([bytes],{type:'application/pdf'}));var a=document.createElement('a');a.href=url;a.download='Egypt-Eclipse-x-Do-LaB.pdf';document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(url)},4000);lab.textContent='Download PDF';}
+ catch(e){console.error(e);lab.textContent='Try again';}
+ btn.disabled=false;
+});
+window.__dolabBuildPDF=build;
 })();
 </script>
 
