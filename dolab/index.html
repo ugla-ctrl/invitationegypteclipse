@@ -87,19 +87,20 @@ a.x:hover{color:var(--ink)}
 <main>
 <p class="lab">Collaboration proposal</p>
 <h1>Back to Egypt</h1>
-<p>In December 2012 you took The Great Convergence to the pyramids and down the Nile. We&#39;d like to invite you back for the next great celestial gathering for the <a class="x" href="https://egypteclipse.com/totality">total solar eclipse over Luxor</a> on August 2, 2027.</p>
-<p>Totality lasts 6 minutes 23 seconds, the longest on land this century. Around 500 people travel with us, by <a class="x" href="https://egypteclipse.com/pathways/nile-cruise">Nile cruise</a> or on <a class="x" href="https://egypteclipse.com/pathways">Luxor&#39;s West Bank</a>, then on to <a class="x" href="https://egypteclipse.com/pathways/giza">Giza</a>. We&#39;d love the Do LaB to be part of it.</p>
+<p>In December 2012 you took The Great Convergence to the pyramids and down the Nile. Fifteen years on, we&#39;d love to bring you back for what we think will be one of the most talked-about gatherings of the decade.</p>
+<p>Around the <a class="x" href="https://egypteclipse.com/totality">total solar eclipse over Luxor</a> on August 2, 2027, we&#39;re producing world-class experiential moments at some of the world&#39;s most sacred sites, with the Temple of Hatshepsut planned among them: a New Moon Ceremony, 6 minutes 23 seconds of totality, a celebration that night, and the <a class="x" href="https://egypteclipse.com/pathways/lions-gate">Lion&#39;s Gate</a> at the pyramids of <a class="x" href="https://egypteclipse.com/pathways/giza">Giza</a>. Around 500 people travel with us, by <a class="x" href="https://egypteclipse.com/pathways/nile-cruise">Nile cruise</a> or on <a class="x" href="https://egypteclipse.com/pathways">Luxor&#39;s West Bank</a>, and the circle is deliberately high-touch: artists, builders, thinkers and community leaders who come as co-creators.</p>
+<p>It&#39;s still early. The program is being shaped now, and we can feature the Do LaB to whatever degree feels right, from a single night to the setting for the whole Gathering. We want to create something intimate, festival-inspired and unforgettable with you.</p>
 <p class="proof">From the team behind <a class="x" href="https://recap.icelandeclipse.com">Iceland Eclipse 2026</a>, which brought people from more than 75 countries together for totality.</p>
 <div class="strip">
  <img src="colonnade.jpg" alt="A traveler looking up in a sunlit temple colonnade">
  <img src="hatshepsut.jpg" alt="Temple of Hatshepsut lit at night beneath the cliffs">
  <img src="nile.jpg" alt="The Nile lined with palms at golden hour">
 </div>
-<div class="sec"><p class="lab">Where we see you</p><span></span></div>
+<div class="sec"><p class="lab">Opportunities for collaboration</p><span></span></div>
 <div class="roles">
- <div><h3>I · Build</h3><p>Eclipse day is outdoors in August heat. We need shade and a stage on the Gathering field next to the <a class="x" href="https://egypteclipse.com/pathways/marsam">Marsam hotel</a>.</p><p class="when"><a href="https://egypteclipse.com/pathways/gathering">The Gathering · Aug 1 to 3</a></p></div>
- <div><h3>II · Curate</h3><p>Take a night: the celebration after totality on August 2, or the Lion&#39;s Gate at the Giza pyramids on August 8.</p><p class="when"><a href="https://egypteclipse.com/pathways/lions-gate">Lion&#39;s Gate · Aug 8</a></p></div>
- <div><h3>III · Host</h3><p>Bring your crew as a group on one of the Nile boats or at a Luxor hotel, and host that part of the journey.</p><p class="when"><a href="https://egypteclipse.com/pathways">The pathways</a></p></div>
+ <div><h3>I · Set the stage</h3><p>Anchor the peak moment of the Gathering by creating the setting for the Nile&#39;s most epic eclipse celebration, beneath the cliffs of the Temple of Hatshepsut (planned).</p><p class="when"><a href="https://egypteclipse.com/pathways/gathering">The Gathering · Aug 1 to 3</a></p></div>
+ <div><h3>II · Program a night</h3><p>Shape a night of the program: the celebration after totality on August 2, or the Lion&#39;s Gate at the pyramids of Giza on August 8.</p><p class="when"><a href="https://egypteclipse.com/pathways/gathering">Totality Celebration · Aug 2</a> &nbsp;/&nbsp; <a href="https://egypteclipse.com/pathways/lions-gate">Lion&#39;s Gate · Aug 8</a></p></div>
+ <div><h3>III · Host</h3><p>Bring your community on a boat or hotel of its own, with your crew at the heart of the journey.</p><p class="when"><a href="https://egypteclipse.com/pathways">The pathways</a></p></div>
  <div><h3>IV · Share</h3><p>Tell the Lightning in a Bottle community about Egypt, and we&#39;ll tell ours about LIB. The dates don&#39;t overlap.</p><p class="when"><a href="https://egypteclipse.com/trilogy">The Eclipse Trilogy</a></p></div>
 </div>
 </main>
@@ -280,10 +281,10 @@ async function build(){
  var heroJ=await doc.embedJpg(await jpg(hc));
  var strips=[['colonnade.jpg',.5],['hatshepsut.jpg',1],['nile.jpg',.55]], ws=[0.8,1.3,1].map(function(f){return 656*f/3.1;}), sj=[];
  for(var i=0;i<3;i++){var im=await img(strips[i][0]);sj.push(await doc.embedJpg(await jpg(cover(im,ws[i],96,strips[i][1]))));}
- var P1="In December 2012 you took The Great Convergence to the pyramids and down the Nile. We'd like to invite you back for the next great celestial gathering for the total solar eclipse over Luxor on August 2, 2027.";
- var P2="Totality lasts 6 minutes 23 seconds, the longest on land this century. Around 500 people travel with us, by Nile cruise or on Luxor's West Bank, then on to Giza. We'd love the Do LaB to be part of it.";
+ var P1="In December 2012 you took The Great Convergence to the pyramids and down the Nile. Fifteen years on, we'd love to bring you back for what we think will be one of the most talked-about gatherings of the decade.";
+ var P2="Around the total solar eclipse over Luxor on August 2, 2027, we're producing world-class experiential moments at some of the world's most sacred sites, with the Temple of Hatshepsut planned among them: a New Moon Ceremony, 6 minutes 23 seconds of totality, a celebration that night, and the Lion's Gate at the pyramids of Giza. Around 500 people travel with us, by Nile cruise or on Luxor's West Bank, and the circle is deliberately high-touch: artists, builders, thinkers and community leaders who come as co-creators.";var P3="It's still early. The program is being shaped now, and we can feature the Do LaB to whatever degree feels right, from a single night to the setting for the whole Gathering. We want to create something intimate, festival-inspired and unforgettable with you.";
  var PROOF="From the team behind Iceland Eclipse 2026, which brought people from more than 75 countries together for totality.";
- var R=[["I · Build","Eclipse day is outdoors in August heat. We need shade and a stage on the Gathering field next to the Marsam hotel.","THE GATHERING · AUG 1 TO 3"],["II · Curate","Take a night: the celebration after totality on August 2, or the Lion's Gate at the Giza pyramids on August 8.","LION'S GATE · AUG 8"],["III · Host","Bring your crew as a group on one of the Nile boats or at a Luxor hotel, and host that part of the journey.","THE PATHWAYS"],["IV · Share","Tell the Lightning in a Bottle community about Egypt, and we'll tell ours about LIB. The dates don't overlap.","THE ECLIPSE TRILOGY"]];
+ var R=[["I \u00b7 Set the stage","Anchor the peak moment of the Gathering by creating the setting for the Nile's most epic eclipse celebration, beneath the cliffs of the Temple of Hatshepsut (planned).","THE GATHERING \u00b7 AUG 1 TO 3"],["II \u00b7 Program a night","Shape a night of the program: the celebration after totality on August 2, or the Lion's Gate at the pyramids of Giza on August 8.","TOTALITY NIGHT \u00b7 LION'S GATE"],["III \u00b7 Host","Bring your community on a boat or hotel of its own, with your crew at the heart of the journey.","THE PATHWAYS"],["IV \u00b7 Share","Tell the Lightning in a Bottle community about Egypt, and we'll tell ours about LIB. The dates don't overlap.","THE ECLIPSE TRILOGY"]];
  var MOM=[["AUG 1","New Moon Ceremony"],["AUG 2","Eclipse Viewing"],["AUG 2","Totality Celebration"],["AUG 8","Lion's Gate, Giza"]];
  var TIM=[["DEC 8","First Contact participant announcement"],["FEB","Temple approvals"],["LATE JUL","On site in Luxor"]];
  function W(t,f,s){return f.widthOfTextAtSize(t,s*S)/S;}
@@ -297,12 +298,12 @@ async function build(){
   var y=250+22*k;
   txt('COLLABORATION PROPOSAL',72,y,cin,11,17.6,BR,2.64);y+=17.6+5*k;
   txt('Back to Egypt',72,y,cor,32*Math.min(1,k+.1),35.2*k,INK);y+=35.2*k+8*k;
-  [P1,P2].forEach(function(p,i){var fs=15.5*Math.min(1,k+.05),lh=fs*1.45;wrap(p,eb,fs,672).forEach(function(l){txt(l,72,y,eb,fs,lh,INK);y+=lh;});y+=6*k;});
+  [P1,P2,P3].forEach(function(p,i){var fs=15.5*Math.min(1,k+.05),lh=fs*1.45;wrap(p,eb,fs,672).forEach(function(l){txt(l,72,y,eb,fs,lh,INK);y+=lh;});y+=6*k;});
   y+=4*k;rect(72,y,672,0.75,GOLD);y+=8*k;
   var pf=17*Math.min(1,k+.05);wrap(PROOF,cori,pf,672).forEach(function(l){txt(l,72,y,cori,pf,pf*1.3,INK);y+=pf*1.3;});
   y+=16*k;var sh=96*k,sx=72;for(var i=0;i<3;i++){if(draw)page.drawImage(sj[i],{x:sx*S,y:(PH-y-sh)*S,width:ws[i]*S,height:sh*S});sx+=ws[i]+8;}
   y+=sh+20*k;
-  txt('WHERE WE SEE YOU',72,y,cin,11,17.6,BR,3.08);var lw=spW('WHERE WE SEE YOU',cin,11,3.08);rect(72+lw+16,y+8.8,744-(72+lw+16),0.75,GOLD);y+=17.6+12*k;
+  txt('OPPORTUNITIES FOR COLLABORATION',72,y,cin,11,17.6,BR,3.08);var lw=spW('OPPORTUNITIES FOR COLLABORATION',cin,11,3.08);rect(72+lw+16,y+8.8,744-(72+lw+16),0.75,GOLD);y+=17.6+12*k;
   for(var r=0;r<2;r++){var hm=0;for(var c=0;c<2;c++){var e=R[r*2+c],x=72+c*356,yy=y;txt(e[0],x,yy,cor,22*Math.min(1,k+.08),25.3*k,BR);yy+=25.3*k+3*k;var fs=15*Math.min(1,k+.05),lh=fs*1.42;wrap(e[1],eb,fs,316).forEach(function(l){txt(l,x,yy,eb,fs,lh,INK);yy+=lh;});yy+=4*k;txt(e[2],x,yy,cin,10,15,BR,2);yy+=15;hm=Math.max(hm,yy-y);}y+=hm+(r?0:12*k);}
   y+=20*k;
   var colW=202.67,rowH=21*k,lh2=17*k;function rh(rw){return wrap(rw[1],eb,14,colW-60).length>1?rowH+lh2*(wrap(rw[1],eb,14,colW-60).length-1):rowH;}function tot(arr){return arr.reduce(function(a,rw){return a+rh(rw);},0);}var bh=16*k+16.8+4+Math.max(tot(MOM),tot(TIM),58)+16*k;
